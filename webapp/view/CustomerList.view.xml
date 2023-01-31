@@ -1,0 +1,41 @@
+<mvc:View controllerName="stk.starterkit.controller.CustomerList"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+     <Page id="page" title="{i18n>title}">
+        <content>
+            <Carousel id="Carousel" width="100%" height="30%">
+                <pages>
+                    <Image id="CapImg1" src ="https://upload.wikimedia.org/wikipedia/commons/9/9d/Capgemini_201x_logo.svg" width="50%" height="50%"/>
+                    <Image id="CapImg2" src ="https://upload.wikimedia.org/wikipedia/commons/9/9d/Capgemini_201x_logo.svg" width="50%" height="50%"/>
+                    <Image id="CapImg3" src ="https://upload.wikimedia.org/wikipedia/commons/9/9d/Capgemini_201x_logo.svg" width="50%" height="50%"/>
+                </pages>
+                <customLayout>
+                    <CarouselLayout id="carouselLayout"/>
+                </customLayout>
+            </Carousel>
+
+            <Button id="createCustomer" type="Transparent" text="{i18n>createCustomer}" press="BntCreateCustomer" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom pinkBackground"/>
+            <Button id="Performance" type="Transparent" text="{i18n>performance}" press="BntPerformance" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom"/>
+
+            
+            <Table id="tab" items="{path:'/Customers', parameter:{select: 'CompanyName, Country'}}">
+                <columns>
+                    <Column id="col1">
+                        <Label id="l1" text="{i18n>companyName}"/>
+                    </Column>
+                    <Column id="col2">
+                        <Label id="l2" text="{i18n>country}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="colLitem" type="Navigation" press="onCustomerPress">
+                        <Text id="txt1" text="{CompanyName}"/>
+                        <Text id="txt2" text="{Country}"/>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page> 
+</mvc:View>

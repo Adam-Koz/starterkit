@@ -1,0 +1,42 @@
+<core:FragmentDefinition xmlns='sap.m' xmlns:core='sap.ui.core' xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+    <Dialog id="contactDialog" title="{i18n>contactDeatils}">
+        <VBox id="vbox" class="sapUiSmallMargin">
+            <f:Form id="form" editable="false">
+                <f:layout>
+                    <f:ColumnLayout id="_IDGenColumnLayout1" columnsM="1" />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer id="_IDGenFormContainer1">
+                        <f:formElements>
+                            <f:FormElement id="_IDGenFormElement1" label="{i18n>name}">
+                                <f:fields>
+                                    <Text id="nameText" text="{CompanyName}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenFormElement2" label="{i18n>contactTitle}">
+                                <f:fields>
+                                    <Text id="contactTitleText" text="{ContactTitle}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenFormElement3" label="{i18n>address}">
+                                <f:fields>
+                                    <Text id="addressText" text="{Address}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenFormElement4" label="{i18n>phone}">
+                                <f:fields>
+                                    <Text id="phoneText" text="{Phone}" />
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        </VBox>
+        <Toolbar id="dialogToolbar">
+            <ToolbarSpacer id="toolbarSpacerDialog"/>
+            <Button id="BntDialogBack" text="Close"  type="Negative" press="DialogBackBnt" />
+        </Toolbar>
+        
+    </Dialog>
+</core:FragmentDefinition>

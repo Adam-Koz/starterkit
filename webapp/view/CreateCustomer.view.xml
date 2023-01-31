@@ -1,0 +1,19 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="stk.starterkit.controller.CustomerList"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <Page id="PageCreateCustomer" title="{i18n>titleCreateCustomer}">
+        <Toolbar id="toolbar">
+            	<ToolbarSpacer id="toolbarSpacer"/>
+                <Button id="CreateCustomer" text="{i18n>bntCreate}" press="onBntCreate"/>
+        </Toolbar>
+        <form:SimpleForm id="_IDGenSimpleForm1"  editable="true">
+            <Label id="_IDGenLabel1" text="Customer ID"/>
+            <Input id="CustomerID" width="50%"/>
+            <Label id="_IDGenLabel2" text="Customer Name"/>
+            <Input id="CustomerName" width="50%"/>
+        </form:SimpleForm>
+    </Page>
+
+</mvc:View>

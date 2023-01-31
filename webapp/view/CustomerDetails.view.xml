@@ -1,0 +1,43 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="stk.starterkit.controller.CustomerDetails"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page   xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" 
+            id="CustomerDetails">
+
+        <customHeader>
+            <Toolbar id="toolbar">
+                <Text id="CompanyNameTitle" text="{CompanyName}" />
+            	<ToolbarSpacer id="toolbarSpacer"/>
+                <Button id="BntShowDetails" text="{i18n>BntShowDetails}" press="onPress" />
+            </Toolbar>
+
+		</customHeader>
+
+        <Table id="OrdersTab" items="{Orders}">
+            <columns>
+                <Column id="OrderColumn">
+                    <Label id="OrderID" text="{i18n>orderID}"></Label>
+                </Column>
+                <Column id="EmployeeColumn">
+                    <Label id="Employee" text="{i18n>employee}"></Label>
+                </Column>
+                <Column id="OrderDateColumn">
+                    <Label id="OrdDateColm" text="{i18n>orderDate}"></Label>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="colItemCustDetails">
+                    <Text id="txt1" text="{OrderID}"/>
+                    <Text id="txt2" text="{parts: [{path: 'Employee/FirstName'}, {path: 'Employee/LastName'}], formatter: '.formatter.formatName'}"/>
+                    <Text id="txt3" text="{path: 'OrderDate', type: 'sap.ui.model.type.DateTime', formatOptions:{style: 'medium'}}"/>
+                </ColumnListItem>
+            </items>
+        </Table>
+       
+    </Page> 
+
+    
+        
+</mvc:View>

@@ -1,0 +1,10 @@
+/* Enter your custom styles here */
+.pinkBoackground{
+    color: #f2afba;
+}
+.blueTest tr:first-child span{
+    color: #00f !important;
+}
+.blueTest tr:hover span {
+    color: #00f !important;
+}

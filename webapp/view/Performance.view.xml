@@ -1,0 +1,31 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:table="sap.ui.table"  controllerName="stk.starterkit.controller.Performance">
+    <Page id="performance" title="{i18n>performance}">
+        <Table id="tablePerformance" items="{path: '/Employees', parameters: {expand: 'Orders'}}">
+            <columns>
+                <Column id="Col1">
+                    <Label id="l1" text="{i18n>name}" />
+                </Column>
+                <Column id="Col2">
+                    <Label id="l2" text="{i18n>position}" />
+                </Column>
+                <Column id="Col3">
+                    <Label id="l3" text="{i18n>orders}" />
+                </Column>
+                <Column id="Col4">
+                    <Label id="l4" text="{i18n>actions}" class="sapUiMediumMarginBegin" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="columnlistitem2">
+                    <Text id="text1" text="{FirstName} {LastName}" />
+                    <Text id="text2" text="{Title}" />
+                    <Text id="text3" text="{=${Orders}.length}" />
+                    <FlexBox id="ActionButtons">
+                        <Button id="motivate" type="Accept" text="{i18n>motivate}" press="onMotivate" class=" sapUiTinyMarginTopBottom "/>
+                        <Button id="fire" type="Reject" text="{i18n>fire}" press="onFire" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom " />
+                    </FlexBox>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>
